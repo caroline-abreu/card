@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 1110px;
+  margin: 40px auto;
+}
+
+p,
+span {
+  text-transform: uppercase;
+}
+
+.card {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+  width: 95%;
+  max-width: 750px;
+  height: auto;
+  min-height: 240px;
+  border: 1px solid white;
+  box-shadow: 12px 17px 51px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 17px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  color: black;
+  margin: 1rem;
+}
+
+.card:hover {
+  border: 1px solid black;
+  transform: scale(1.05);
+}
+
+.card:active {
+  transform: scale(0.95) rotateZ(1.7deg);
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.card-image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.card-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.card-text-title {
+  font-size: 0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+.card-text-description {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: none;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  /* justify-content: center; */
+}
+
+.card-tags span {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #fff;
+  background-color: #3c5a8e;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
+
+.card-btn {
+  background-color: #38b270;
+  color: #fff;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-weight: 700;
+  width: 100%;
+}
+
+.card-footer {
+  font-size: 0.6rem;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+    /* align-items: flex-start; */
+    justify-content: flex-start;
+  }
+
+  .card-image-container {
+    width: 40%;
+    margin-bottom: 0;
+    padding: 1rem;
+  }
+
+  .card-content {
+    width: 60%;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .card-text {
+    padding: 1rem 0;
+  }
+
+  .card-btn {
+    width: auto;
+  }
+}
